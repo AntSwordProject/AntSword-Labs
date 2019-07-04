@@ -1,0 +1,15 @@
+version: '2'
+services:
+  web:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: medicean/antsword-labs:php-5.6.11-apache
+    depends_on:
+      - mysqldb
+    ports:
+      - "18080:80"
+  mysqldb:
+    image: mysql:5
+    environment: 
+      - MYSQL_ROOT_PASSWORD=root
