@@ -25,7 +25,7 @@ $ docker-compose up -d
 ```
 
 Shell | 密码
-:-:|:-:|:-:
+:-:|:-:
 `http://127.0.0.1:18080/index.php` | ant
 `http://127.0.0.1:18080/shell.php` | ant
 
