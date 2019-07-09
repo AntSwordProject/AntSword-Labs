@@ -18,6 +18,8 @@ disable_functions=pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexite
 
 AntSword >= 2.1.4
 
+我们的最终目的是获取 `/flag` 的内容, 这个文件是 644 权限，`www-data` 用户无法通过读文件的形式读到内容, 需要执行拥有 SUID 权限的 `tac` 命令(具体看 `/start.sh`)来获取 flag
+
 1. 启动环境
 
 ```
@@ -66,6 +68,14 @@ www-data   911   910  0 00:17 ?        00:00:00 ps -aef
 
 执行了 `ls -al /tmp`, 可以看到每次都生成了以 `as` 开头的临时文件, 这就是我们执行完命令之后, 将输出重定向到了临时文件中, 然后再读出来
 
+
+5. 尝试文件管理直接用 PHP 读 flag, 肯定是读不到的
+
+![5.png](https://i.loli.net/2019/07/09/5d241ee38a56c78243.png)
+
+然后我们改用 tac 命令来获取 flag
+
+![6.png](https://i.loli.net/2019/07/09/5d241eed1677e95411.png)
 
 #### 手动
 

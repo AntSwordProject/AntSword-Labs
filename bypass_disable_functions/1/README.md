@@ -15,6 +15,8 @@ disable_functions=pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexite
 
 ###  绕过实验
 
+我们的最终目的是获取 `/flag` 的内容, 这个文件是 644 权限，`www-data` 用户无法通过读文件的形式读到内容, 需要执行拥有 SUID 权限的 `tac` 命令(具体看 `/start.sh`)来获取 flag
+
 1. 启动环境
 
 ```
@@ -55,6 +57,14 @@ Shell | 密码
 从上图可看出来，我们利用 LD_PRELOAD, 在目标机器的 lo 上用 PHP 启动了一个 http server, 并且加载的是 PHP 默认配置。
 
 所以我们需要在插件中填写正确的 php 可执行文件的路径(如果在环境变量中, 可以直接写 `php`)
+
+5. 尝试文件管理直接用 PHP 读 flag, 肯定是读不到的
+
+![5.png](https://i.loli.net/2019/07/09/5d241ee38a56c78243.png)
+
+然后我们改用 tac 命令来获取 flag
+
+![6.png](https://i.loli.net/2019/07/09/5d241eed1677e95411.png)
 
 #### 手动
 
