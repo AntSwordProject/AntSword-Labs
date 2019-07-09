@@ -3,8 +3,8 @@ FROM antswordproject/antsword-labs:bypass_disable_functions_1
 ARG GNU_MIRROR=https://ftp.gnu.org/gnu
 
 # China mirror
-# ARG GNU_MIRROR=http://mirrors.ustc.edu.cn/gnu
-# COPY ./src/sources.list /etc/apt/sources.list
+ARG GNU_MIRROR=http://mirrors.ustc.edu.cn/gnu
+COPY ./src/sources.list /etc/apt/sources.list
 
 # ShellShock
 RUN set -x \
