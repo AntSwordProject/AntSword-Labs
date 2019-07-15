@@ -22,3 +22,7 @@ RUN set -x \
   && ln -s /usr/local/bin/bash /bin/bash \
   && rm /bin/sh \
   && ln -s /bin/bash /bin/sh
+
+# Clear
+RUN set -x \
+  && rm -rf /var/lib/apt/*
