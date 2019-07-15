@@ -1,0 +1,7 @@
+version: '2'
+services:
+  phpfpm:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: antswordproject/antsword-labs:php-7.2.20-fpm
