@@ -14,7 +14,7 @@ disable_functions=pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexite
 * PHP-FPM
 * 存在可写的目录, 需要上传 `.so` 文件
 
-###  绕过实验
+###  绕过实验 | [演示视频](https://www.bilibili.com/video/av59393944)
 
 我们的最终目的是获取 `/flag` 的内容, 这个文件是 644 权限，`www-data` 用户无法通过读文件的形式读到内容, 需要执行拥有 SUID 权限的 `tac` 命令(具体看 `/start.sh`)来获取 flag
 
