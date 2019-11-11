@@ -6,3 +6,4 @@
 4. [04 PHP-FPM 利用 LD_PRELOAD 环境变量(同1)](./4/)
 5. [05 攻击 PHP-FPM 监听端口](./5/)
 6. [06 Json Serializer UAF](./6/)
+7. [07 PHP7 GC with Certain Destructors UAF](./7/)
