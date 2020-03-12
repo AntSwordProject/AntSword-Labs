@@ -7,3 +7,4 @@
 5. [05 攻击 PHP-FPM 监听端口](./5/)
 6. [06 Json Serializer UAF](./6/)
 7. [07 PHP7 GC with Certain Destructors UAF](./7/)
+8. [08 PHP74 FFI 扩展执行命令](./8/)
