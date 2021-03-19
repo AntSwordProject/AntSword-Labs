@@ -1,0 +1,19 @@
+version: '2'
+services:
+  lbsnode1:
+    build:
+      context: ./tomcat-8-jre8
+      dockerfile: Dockerfile
+  lbsnode2:
+    build:
+      context: ./tomcat-8-jre8
+      dockerfile: Dockerfile
+  nginx:
+    image: nginx:1.17
+    depends_on:
+      - lbsnode1
+      - lbsnode2
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "18080:80"
